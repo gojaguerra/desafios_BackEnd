@@ -5,11 +5,6 @@ class Contenedor {
     //  constructor
     constructor(ruta){
         this.ruta=ruta;
-/*         try {
-            await fs.promises.writeFile(this.ruta, JSON.stringify([], null, 2))
-        } catch (error) {
-            
-        } */
     }
 
     //save
@@ -19,9 +14,7 @@ class Contenedor {
 
         // si existe el id no se agrega nada
         if(listado.length > 0 && listado.some((el) => el.title === obj.title)){
-            // console.log("el producto ya existe");
-            // throw new Error(`Error al guardar unnuevo objeto: $(error)`)
-            return "el producto ya existe";
+            return null;
         }
 
         // identificamos ultimo id
