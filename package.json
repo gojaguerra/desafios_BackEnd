@@ -1,0 +1,24 @@
+{
+  "name": "repogit",
+  "version": "1.0.0",
+  "description": "Aqui ire subiendo los desafios de las clases del curso de Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gojaguerra/desafios_BackEnd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gojaguerra/desafios_BackEnd/issues"
+  },
+  "homepage": "https://github.com/gojaguerra/desafios_BackEnd#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4"
+  }
+}
