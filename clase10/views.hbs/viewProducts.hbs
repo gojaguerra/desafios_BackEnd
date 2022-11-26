@@ -1,0 +1,23 @@
+<h1>Vista de productos - Desafio Clase 10 - Utilizando Handlebars</h1>
+{{#if productos.length}}
+    <ul>
+    {{#each productos}}
+        <li>
+            <p>Nombre: {{this.title}}</p>
+            <p>Precio: {{this.price}}</p>
+            <img src="{{this.thumbnail}}" alt="imagen" width="50" />
+        </li>
+    {{/each}}
+    </ul>
+{{else}}    
+    <p>No se encontraron productos </p>
+{{/if}}
+
+<button id="formButton"> Ir a Cargar Productos</button>
+
+<script>
+    const  formButton = document.getElementById('formButton')
+    formButton.addEventListener('click', (event) => {
+        window.location= "/";
+    });
+</script>

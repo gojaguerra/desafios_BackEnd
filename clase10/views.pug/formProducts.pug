@@ -1,0 +1,21 @@
+extends main.pug 
+
+block datos 
+    h1 Carga tu producto - Desafio Clase 10 - Utilizando PUJ
+    form(action="/product" method="post")
+        input(type="text" name="title" placeholder="ingrese nombre")
+        br
+        input(type="number" name="price" placeholder="ingrese precio")
+        br
+        input(type="text" name="thumbnail" placeholder="url imagen")
+        br
+        input(type="submit" value="Cargar Producto")
+    
+    button(id="verProdButton") Ver los Productos
+
+    script. 
+        const verProdButton = document.getElementById('verProdButton')
+        verProdButton.addEventListener('click', (event) => {
+            window.location= "/product";
+        });
+    

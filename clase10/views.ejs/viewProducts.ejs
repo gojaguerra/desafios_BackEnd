@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 10 - Desafio Plantillas</title>
+</head>
+<body>
+    <h1>Vista de productos - Desafio Clase 10 - Utilizando EJS</h1>
+    <% if(productos.length) { %>
+        <ul>
+            <% productos.forEach(product => { %>
+                <li>
+                    <p>Nombre: <%= product.title %></p>
+                    <p>Precio: <%= product.price %></p>
+                    <img src="<%= product.thumbnail %>" alt="imagen" width="50" />
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No se encontraron productos </p>
+    <% } %>
+
+    <button id="formButton"> Ir a Cargar Productos</button>
+
+    <script>
+        const  formButton = document.getElementById('formButton')
+        formButton.addEventListener('click', (event) => {
+            window.location= "/";
+        });
+    </script>
+</body>
+</html>
